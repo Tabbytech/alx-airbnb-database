@@ -82,3 +82,6 @@ User to Message (Self-Referencing, Many-to-Many via two One-to-Many):<br/>
 A User can send multiple Messages (sender_id).<br/>
 A User can receive multiple Messages (recipient_id).<br/>
 The Message table has sender_id (Foreign Key) and recipient_id (Foreign Key), both referencing User.user_id. This creates a relationship where users can message each other.<br/>
+
+ERD <br/>
+https://drive.google.com/file/d/1qtw87yMyqRevANkLcKFP4SNw5iORumcD/view?usp=drive_link
