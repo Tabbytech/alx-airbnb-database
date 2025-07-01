@@ -14,6 +14,11 @@ Sub-queries.sql demonstrates use of both correlated and non-correlated subquerie
 1.  Non-Correlated Subqueries
 A non-correlated subquery is completely independent of the outer query. It executes once and returns a result set that the outer query then uses. Its execution does not depend on the rows being processed by the outer query.<br/>
  2. Correlated Subqueries
-A correlated subquery is dependent on the outer query. It executes once for each row processed by the outer query. The subquery uses values from the current row of the outer query, creating a "correlation" between the two. This type of subquery can be less efficient than non-correlated ones for large datasets due to its row-by-row execution.
-
+A correlated subquery is dependent on the outer query. It executes once for each row processed by the outer query. The subquery uses values from the current row of the outer query, creating a "correlation" between the two. This type of subquery can be less efficient than non-correlated ones for large datasets due to its row-by-row execution.<br/>
+Aggregations and Window Functions<br/>
+1. Aggregate Functions<br/>
+Aggregate functions perform a calculation on a set of rows and return a single summary value. They are primarily used for summarizing data. When used without a GROUP BY clause, they operate on the entire result set.The GROUP BY clause is typically used with aggregate functions to group rows that have the same values in specified columns into summary rows. This allows the aggregate function to compute a value for each group.<br/>
+2.Window functions<br/>
+  Window functions perform a calculation across a set of table rows that are somehow related to the current row. Crucially, unlike aggregate functions that collapse rows, window functions do not reduce the number of rows returned by the query. They add a new calculated column to each row, providing context based on other rows in the defined "window."<br/>
+It uses ROW_NUMBERS() AND RANK() to assign row numbers and ranks to properties based on the total number of bookings, allowing easy identification of the most booked properties.
 
