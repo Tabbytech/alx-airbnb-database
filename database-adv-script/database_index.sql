@@ -14,3 +14,9 @@ AS total_bookings FROM  user   u LEFT JOIN booking b
 ON u.user_id= b.user_id
 GROUP BY u.user_id, u.first_name
 ORDER BY u.user_id;
+
+EXPLAIN ANALYZE SELECT u.user_id, u.first_name, COUNT(b.booking_id) AS total_bookings
+FROM user u
+LEFT JOIN booking b ON u.user_id = b.user_id
+GROUP BY u.user_id, u.first_name
+ORDER BY u.user_id;
