@@ -10,7 +10,11 @@ According to the analysis of ['database_index.sql'] ( ./database index.sql), The
   '''
 
   -**Booking Table**
-  - 'booking_id': Primary key(index created automatically
+  'booking_id': Primary key(index created automatically)
+   'name': Customindex created
+   '''sql
+  - CREATE INDEX idx_property_name ON property(name);'''
+    
 Performance Impact<b><br>
 Adding indexes to frequently queried column improved query performance, more so for joins involving  user.first_name and property.name and searches.<br/>
 Performance Explanation.<br/>
