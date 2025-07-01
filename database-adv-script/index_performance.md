@@ -19,4 +19,6 @@ According to the analysis of database_index.sql, The following indexexs were cre
 8.idx_message_recipient_id: An index on the recipient_id column in the Message table.<br/>
 Performance Impact<b><br>
 Adding indexes to frequently queried column improved query performance, more so for joins involving  user.first_name and property.name and searches.<br/>
+Performance Explanation.<br/>
+Before indexing the query execution was slow compared to after indexing where query execution time was reduced and there was improved efficiency.
 Indexes are crucial optimization for the large datasets and should be chosen based on query patterns and workload.
