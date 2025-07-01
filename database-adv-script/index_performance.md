@@ -20,8 +20,11 @@ According to the analysis of database_index.sql, The following indexexs were cre
 Performance Impact<b><br>
 Adding indexes to frequently queried column improved query performance, more so for joins involving  user.first_name and property.name and searches.<br/>
 Performance Explanation.<br/>
-Before indexing ! [Before indexing] (./index_performance-image/before_index.jpg)
-During creation of indexing ! [creating indexing] (./index_performance-image/creating index.jpg)
-Before indexing ! [after indexing] (./index_performance-image/after_index.jpg)
+-**Before Indexes:**
+![Before indexes] (./index_performance_images/before_index.png)
+-**creating indexes:**
+ ![creating indexes] (./index_performance_image/creating_index.png)
+ -**After indexes:**
+ ![after indexing] (./index_performance_image/after_index.png)
 Before indexing the query execution was slow compared to after indexing where query execution time was reduced and there was improved efficiency.
 Indexes are crucial optimization for the large datasets and should be chosen based on query patterns and workload.
