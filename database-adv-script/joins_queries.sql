@@ -8,7 +8,8 @@ INNER JOIN User
 --LEFT JOIN
  SELECT * FROM Property 
   LEFT JOIN Review 
-  ON property.property_id = review.property_id;
+  ON property.property_id = review.property_id
+   ORDER BY property.property_id;
 
 --all users and all bookings, even if the user has no booking or a booking is not linked to a user.
 --FULL OUTER JOIN
