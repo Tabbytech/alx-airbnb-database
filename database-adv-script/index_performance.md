@@ -20,5 +20,8 @@ According to the analysis of database_index.sql, The following indexexs were cre
 Performance Impact<b><br>
 Adding indexes to frequently queried column improved query performance, more so for joins involving  user.first_name and property.name and searches.<br/>
 Performance Explanation.<br/>
+Before indexing ! [Before indexing] (./index_performance-image/before_index.jpg)
+During creation of indexing ! [creating indexing] (./index_performance-image/creating index.jpg)
+Before indexing ! [after indexing] (./index_performance-image/after_index.jpg)
 Before indexing the query execution was slow compared to after indexing where query execution time was reduced and there was improved efficiency.
-Indexes are crucial optimization for the large datasets and should be chosen based on query patterns and workload.https://github.com/Tabbytech/alx-airbnb-database/tree/473612254c432aeb4fa11cc2c7dba85f8fbf46ab/database-adv-script/index_performance_image
+Indexes are crucial optimization for the large datasets and should be chosen based on query patterns and workload.
