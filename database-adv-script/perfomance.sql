@@ -1,4 +1,5 @@
--- Initial complex query (performance.sql)
+
+EXPLAIN ANALYZE
 SELECT
     b.booking_id,
     b.property_id,
@@ -23,3 +24,5 @@ JOIN
     properties p ON b.property_id = p.property_id
  LEFT JOIN
     payments py ON b.booking_id = py.booking_id;
+WHERE
+    b.start_date >= '2025-07-01' AND b.start_date < '2025-08-01';
